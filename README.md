@@ -2,7 +2,7 @@
 
 > 《开发工具与工程实践》期末作品 · 学号 2026316010006 · 张杰文
 
-一个用 AI 辅助开发的个人主页 + 兴趣展示静态网站，部署在 Linux 虚拟机的 Nginx 上。
+一个用 AI 辅助开发的个人主页 + 兴趣展示静态网站，部署在腾讯云服务器的 Nginx 上。
 
 ## 项目简介
 
@@ -16,7 +16,7 @@
 - CSS3（Flexbox / Grid / CSS 变量 / 渐入动画 / 响应式）
 - 原生 JavaScript（导航高亮、IntersectionObserver 滚动渐入、技能进度条、表单验证）
 - SVG 内嵌资源（头像 / favicon，无外部图片依赖）
-- 部署：Nginx（Linux 虚拟机）
+- 部署：Nginx（腾讯云 CVM）
 
 ## 目录结构
 
@@ -43,25 +43,29 @@ python -m http.server 8080
 # 然后访问 http://localhost:8080
 ```
 
-## 部署到 Nginx
+## 部署到 Nginx（腾讯云服务器）
 
 详见作业包中的 `03-部署步骤记录.md`。核心步骤：
 
 ```bash
-# 1. 安装 Nginx
-sudo apt update && sudo apt install -y nginx
+# 1. SSH 登录云服务器
+ssh root@<你的公网IP>
 
-# 2. 把网站源码放到 Nginx 根目录
-sudo mkdir -p /var/www/zhangjiewen
-sudo cp -r website-src/* /var/www/zhangjiewen/
+# 2. 安装 Nginx
+apt update && apt install -y nginx
 
-# 3. 配置 Nginx root
-sudo vim /etc/nginx/sites-available/default
+# 3. 克隆仓库并同步到 Nginx 根目录
+git clone https://github.com/ZJW66868/zhangjiewen-homepage.git ~/zhangjiewen-homepage
+mkdir -p /var/www/zhangjiewen
+rsync -av --delete --exclude='.git' ~/zhangjiewen-homepage/ /var/www/zhangjiewen/
+
+# 4. 配置 Nginx root
+nano /etc/nginx/sites-available/default
 #   root /var/www/zhangjiewen;
 #   index index.html;
 
-# 4. 语法检查并重启
-sudo nginx -t && sudo systemctl reload nginx
+# 5. 语法检查并重载
+nginx -t && systemctl reload nginx
 ```
 
 ## 浏览器兼容
@@ -77,7 +81,7 @@ sudo nginx -t && sudo systemctl reload nginx
 ## 在线仓库
 
 - 代码仓库（GitHub，公开）：`https://github.com/ZJW66868/zhangjiewen-homepage`
-- 访问地址：本地虚拟机部署，无公网地址（局域网 IP 形如 `http://192.168.x.x/`）
+- 访问地址：腾讯云服务器部署，公网 IP `http://<你的公网IP>/`
 
 ## 更新日志
 
