@@ -76,7 +76,7 @@ sudo nginx -t && sudo systemctl reload nginx
 
 ## 在线仓库
 
-- 代码仓库（GitHub，公开）：`<填写你的 GitHub 仓库地址，例如 https://github.com/你的用户名/zhangjiewen-homepage>`
+- 代码仓库（GitHub，公开）：`https://github.com/ZJW66868/zhangjiewen-homepage`
 - 访问地址：本地虚拟机部署，无公网地址（局域网 IP 形如 `http://192.168.x.x/`）
 
 ## 更新日志
