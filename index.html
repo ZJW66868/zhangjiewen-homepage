@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="张杰文的个人主页 - 记录成长、分享兴趣">
+    <title>张杰文 · 个人主页</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#hero" class="brand">
+                <span class="brand-mark">ZJW</span>
+                <span class="brand-name">张杰文</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">首页</a>
+                <a href="#about">关于我</a>
+                <a href="#hobbies">兴趣领域</a>
+                <a href="#gallery">瞬间记录</a>
+                <a href="#contact">联系我</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="切换菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <p class="hero-eyebrow">你好，我是</p>
+                <h1 class="hero-title">张杰文</h1>
+                <p class="hero-sub">学生 · 终身学习者 · 兴趣广泛</p>
+                <p class="hero-desc">学号 2026316010006，热爱技术、热爱生活。<br>这里记录我的成长轨迹，也分享我感兴趣的一切。</p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">认识我</a>
+                    <a href="#contact" class="btn btn-ghost">联系我</a>
+                </div>
+            </div>
+            <div class="hero-avatar reveal">
+                <div class="avatar-ring">
+                    <img src="assets/avatar.svg" alt="张杰文头像">
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="向下滚动">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-tag">ABOUT ME</p>
+                <h2 class="section-title">关于我</h2>
+                <p class="section-sub">一些基本的自我介绍</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="about-icon">🎓</div>
+                    <h3>教育背景</h3>
+                    <p>在读大学生，专业方向与计算机及开发工具实践相关。本学期正在学习《开发工具与工程实践》课程，系统训练从代码托管、协作开发到服务器部署的完整工程化能力。</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="about-icon">💡</div>
+                    <h3>学习理念</h3>
+                    <p>我相信"动手出真知"。比起只读理论，我更喜欢直接打开编辑器写代码、把网站部署到服务器上、把每一行命令都跑一遍。这份个人主页就是一次完整的工程实践。</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="about-icon">🚀</div>
+                    <h3>当前关注</h3>
+                    <p>Web 前端开发、Linux 服务器运维、Git 协作工作流。希望通过持续的小项目积累，把每一项工具都用得熟练、用得明白。</p>
+                </div>
+            </div>
+
+            <!-- 技能进度条 -->
+            <div class="skills reveal">
+                <h3 class="skills-title">技能熟练度</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-head"><span>HTML / CSS</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-fill="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-head"><span>JavaScript</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-fill="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-head"><span>Git / GitHub</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-fill="75"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-head"><span>Linux 命令行</span><span>65%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-fill="65"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-head"><span>Nginx 部署</span><span>60%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-fill="60"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兴趣领域 -->
+    <section class="section section-alt" id="hobbies">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-tag">HOBBIES</p>
+                <h2 class="section-title">兴趣领域</h2>
+                <p class="section-sub">学习之外，这些事情让生活更有意思</p>
+            </div>
+            <div class="hobby-grid">
+                <article class="hobby-card reveal" data-color="blue">
+                    <div class="hobby-emoji">💻</div>
+                    <h3>编程与折腾</h3>
+                    <p>喜欢用代码解决生活里的小问题，写过小工具、做过个人主页，享受"想法 → 代码 → 上线"的完整闭环。</p>
+                    <ul class="hobby-tags">
+                        <li>前端开发</li><li>Linux</li><li>小工具</li>
+                    </ul>
+                </article>
+                <article class="hobby-card reveal" data-color="green">
+                    <div class="hobby-emoji">📚</div>
+                    <h3>阅读</h3>
+                    <p>偏好技术与人文兼顾的书单。技术书补专业底子，非虚构类拓宽视野，小说则纯粹为了放松。</p>
+                    <ul class="hobby-tags">
+                        <li>技术书</li><li>人文社科</li><li>科幻</li>
+                    </ul>
+                </article>
+                <article class="hobby-card reveal" data-color="orange">
+                    <div class="hobby-emoji">🏃</div>
+                    <h3>运动</h3>
+                    <p>坚持跑步和羽毛球。运动不只是锻炼身体，也是清理思路的好方式，跑完一圈代码都顺了不少。</p>
+                    <ul class="hobby-tags">
+                        <li>跑步</li><li>羽毛球</li><li>徒步</li>
+                    </ul>
+                </article>
+                <article class="hobby-card reveal" data-color="purple">
+                    <div class="hobby-emoji">🎵</div>
+                    <h3>音乐</h3>
+                    <p>学习时听纯音乐保持专注，休息时切换流行和民谣。偶尔也研究一下耳机和音箱的小知识。</p>
+                    <ul class="hobby-tags">
+                        <li>纯音乐</li><li>流行</li><li>民谣</li>
+                    </ul>
+                </article>
+                <article class="hobby-card reveal" data-color="red">
+                    <div class="hobby-emoji">📷</div>
+                    <h3>摄影记录</h3>
+                    <p>喜欢用手机随手记录生活里的小细节：路边的猫、雨后的天空、深夜的键盘。不求专业，只为留住瞬间。</p>
+                    <ul class="hobby-tags">
+                        <li>街拍</li><li>风景</li><li>生活</li>
+                    </ul>
+                </article>
+                <article class="hobby-card reveal" data-color="teal">
+                    <div class="hobby-emoji">🍳</div>
+                    <h3>做饭</h3>
+                    <p>从煮泡面到能做几道家常菜，过程的治愈感不输给写代码。最近在练红烧系列，下次朋友来可以露一手。</p>
+                    <ul class="hobby-tags">
+                        <li>家常菜</li><li>红烧</li><li>烘焙</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 瞬间记录 -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-tag">MOMENTS</p>
+                <h2 class="section-title">瞬间记录</h2>
+                <p class="section-sub">一些随手记下的画面与片段</p>
+            </div>
+            <div class="gallery-grid">
+                <figure class="gallery-item reveal">
+                    <div class="gallery-svg svg-1"></div>
+                    <figcaption>清晨的窗台</figcaption>
+                </figure>
+                <figure class="gallery-item reveal">
+                    <div class="gallery-svg svg-2"></div>
+                    <figcaption>深夜的代码</figcaption>
+                </figure>
+                <figure class="gallery-item reveal">
+                    <div class="gallery-svg svg-3"></div>
+                    <figcaption>周末的跑道</figcaption>
+                </figure>
+                <figure class="gallery-item reveal">
+                    <div class="gallery-svg svg-4"></div>
+                    <figcaption>回家路上的天空</figcaption>
+                </figure>
+                <figure class="gallery-item reveal">
+                    <div class="gallery-svg svg-5"></div>
+                    <figcaption>一杯安静的下午茶</figcaption>
+                </figure>
+                <figure class="gallery-item reveal">
+                    <div class="gallery-svg svg-6"></div>
+                    <figcaption>书桌的一角</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-tag">CONTACT</p>
+                <h2 class="section-title">联系我</h2>
+                <p class="section-sub">如果有什么想聊的，欢迎找到我</p>
+            </div>
+            <div class="contact-wrap">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <span class="contact-emoji">📧</span>
+                        <div>
+                            <p class="contact-label">邮箱</p>
+                            <p class="contact-value">zhangjiewen@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-emoji">🐙</span>
+                        <div>
+                            <p class="contact-label">GitHub</p>
+                            <p class="contact-value">@zhangjiewen</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-emoji">🎓</span>
+                        <div>
+                            <p class="contact-label">学号</p>
+                            <p class="contact-value">2026316010006</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <h3>给我留言</h3>
+                    <div class="form-row">
+                        <label for="name">你的称呼</label>
+                        <input type="text" id="name" name="name" placeholder="怎么称呼你" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">联系邮箱</label>
+                        <input type="email" id="email" name="email" placeholder="方便回复你" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="message">留言内容</label>
+                        <textarea id="message" name="message" rows="4" placeholder="想说什么都可以" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">发送留言</button>
+                    <p class="form-tip" id="formTip" hidden>✅ 留言已记录（本站为静态演示，留言仅在前端展示）</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2026 张杰文 · 学号 2026316010006</p>
+            <p>本站为《开发工具与工程实践》期末作品 · 用 AI 辅助开发 · Nginx 部署</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部 -->
+    <button class="back-top" id="backTop" aria-label="返回顶部">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
