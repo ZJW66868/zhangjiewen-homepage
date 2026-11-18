@@ -48,8 +48,9 @@ python -m http.server 8080
 详见作业包中的 `03-部署步骤记录.md`。核心步骤：
 
 ```bash
-# 1. SSH 登录云服务器
-ssh root@<你的公网IP>
+# 1. SSH 登录云服务器（Ubuntu 镜像默认登录名 ubuntu，登录后 sudo -i 切到 root）
+ssh ubuntu@129.211.189.50
+sudo -i
 
 # 2. 安装 Nginx
 apt update && apt install -y nginx
@@ -81,10 +82,11 @@ nginx -t && systemctl reload nginx
 ## 在线仓库
 
 - 代码仓库（GitHub，公开）：`https://github.com/ZJW66868/zhangjiewen-homepage`
-- 访问地址：腾讯云服务器部署，公网 IP `http://<你的公网IP>/`
+- 访问地址：腾讯云服务器部署，公网 IP `http://129.211.189.50/`
 
 ## 更新日志
 
 - v0.1 (2026-11-10): 初始化项目，完成首页五大板块与全站样式
+- v0.2 (2026-11-18): 更新首屏介绍文案，验证本地 → GitHub → 服务器完整更新链路
 
 © 2026 张杰文 · 学号 2026316010006
